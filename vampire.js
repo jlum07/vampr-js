@@ -57,18 +57,12 @@ class Vampire {
     let thisPath = pathToRoot(this);
     let vampPath = pathToRoot(vampire);
 
-    // console.log("this", thisPath);
-    // console.log("vamp", vampPath);
-
 
     let prevVamp = thisPath[0];
 
     let shortPath = (thisPath.length <= vampPath.length ? thisPath.length : vampPath.length)
 
     for (let i = 0; i < shortPath; i++) {
-      // console.log("this", thisPath[i].name, "vamp", vampPath[i].name);
-      // console.log(i);
-      // console.log("vamp", vampPath[i].name);
       if (thisPath[i].name != vampPath[i].name) {
         return prevVamp;
       } else if (((i + 1 == thisPath.length) && thisPath[i].name == vampPath[i].name) || ((i + 1 == vampPath.length) && thisPath[i].name == vampPath[i].name)) {
@@ -81,11 +75,6 @@ class Vampire {
 
     return thisPath ? this : vampire;
 
-    // if (this.creator === null) {
-    //   return this;
-    // } else if (vampire.creator === null) {
-    //   return vampire;
-    // }
   }
 }
 
